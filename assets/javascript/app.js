@@ -28,6 +28,8 @@ var incorrectAns = 0;
 // need an array to list the question, and allow for the function to read through with .operator process
 
 
+// need to show only one queston at a time
+
 
 // verify the correct button was selected correct answer === radio button selected === true
 //function myFunction() {
