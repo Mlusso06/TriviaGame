@@ -23,21 +23,23 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <!-- link to my javascript page for the trivia app -->
+    
 
     <header>
         <h1 class="header">POP culture Trivia Game</h1>
+        <!-- This is the start button for the game -->
         <div class="headBtn">
         <button class="startBtn btn-dark"> Push Me to start</button>
     </div>
     </header>
+    <!-- my container for the game image and the second col will hold my questions and answers -->
     <div class="testContainer">
         <br>
         <div class="row">
             <div class="col-2"></div>
             <div id="questDisplay" class="col-4"> </div>
-
-            <div class="col-6"></div>
+            <div class="col-3"></div>
+            <div id="timeClock" class="col-3"></div>
 
 
         </div>
@@ -45,7 +47,7 @@
 
     </div>
 
-
+<!-- This is where my results will be kept -->
     <div class="results">
 
 
@@ -57,7 +59,7 @@
 
 
 
-
+<!-- link to my javascript page for the trivia app -->
 
     <script src="assets/javascript/app.js">
     </script>

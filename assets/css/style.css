@@ -2,6 +2,8 @@
     text-align: center;
 }
 
+/* giving the button some room to breathe */
+
 .headBtn {
     text-align: center;
     margin-top: 1em;
@@ -10,7 +12,7 @@
 
 body {}
 
-.startBtn {}
+/* making sure the image and the container can hold the look and feel for the user and the questions  */
 
 .testContainer {
     background-image: url("../images/background1.jpg");
@@ -21,9 +23,11 @@ body {}
     height: 100vh;
 }
 
-#questDisplay {}
-
 .results {
     margin-top: 5em;
     text-align: center;
+}
+
+#timeClock {
+    margin-top: 10em;
 }

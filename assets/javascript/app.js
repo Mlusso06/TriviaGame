@@ -15,6 +15,7 @@
 
 var correctAns = 0;
 var incorrectAns = 0;
+var gameClock = 60;
 
 
 //----
@@ -23,11 +24,37 @@ var incorrectAns = 0;
 // need my start button to be removed from the page after "click" and start the game
 $('.startBtn').on('click', function () {
     $('.startBtn').remove();
+    // function run() {
+    //     clearInterval(intervalId);
+    //     intervalId = setInterval(decrement, 600);
+    // }
+    // function decrement(){
+    //     gameClock--;
+    //     $("#timeClock").html("<h3>"+gameClock+"</h3>");
+    //     if(gameClock === 0) {
+    //         stop();
+    //         alert("Time UP!!!!");
+
+    //     }
+    // }
+    // function stop () {
+    //     clearInterval(intervalId);
+    // }
+    // run();
+
+    // have my clock running to display time is up after 60 seconds
+    setTimeout(timeUp, 1000 * 3);
+        function timeUp() {
+            console.log("done");
+  $("#timeClock").append("<h2>Time's Up!</h2>");
+  console.log("time is up");
+        }
     // need a for loop to run through each of my questions, and make them appear on the Html page
     for (var i = 0; i < triviaQs.length; i++) {
         $('#questDisplay').append('<h5>' + triviaQs[i].question + '</h5>');
         // my second loop to revew the answers that the user can select
         for (var j = 0; j < triviaQs[i].selections.length; j++) {
+            // created the answers with the radio button
             $("#questDisplay").append("<input type='radio' name='question-" + i + "' value='" + triviaQs[i].selections[j] + "'>" + triviaQs[i].selections[j])
         }
     }
@@ -39,6 +66,7 @@ var triviaQs = [{
     question: "What goverment operative with severe memory loss did Matt Damon bring to the silver screen?",
     selections: ["James Bond  ", "Austing Powers  ", "Ethan Hunt  ", "Jason Bourne "],
     corrAns: "Jason Bourne"
+
 },
 {
     question: "what toy was Mr.Potato Head hoping Andy would get for his birthday, in Toy Story?",
@@ -81,22 +109,21 @@ var triviaQs = [{
     corrAns: "Boba Fett"
 }
 ];
+// want to show the questions
+triviaQs.forEach((triviaQs) => console.log(triviaQs.question));
+// want to console the correct answers
+triviaQs.forEach((triviaQs) => console.log(triviaQs.corrAns));
 
-
-// need to show only one queston at a time
-
-
-// verify the correct button was selected correct answer === radio button selected === true
-//function myFunction() {
-    //     var x = document.getElementById("myRadio").checked;
-    //     document.getElementById("demo").innerHTML = x;
-    //   }
-
-
-
-
-    // show questions and multiple choice answers on web page with radio slectors 
         // need a timer for the user to select the correct answer
+var triviaGame = {
+    correctAns: 0,
+    incorrectAns: 0,
+   
+    
+}
+
+
+
     // what happens when the user selects correct answer
     // what happens when the user slects wrong answer
         // need a timer after wrong answer
