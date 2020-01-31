@@ -26,7 +26,7 @@ $('.startBtn').on('click', function () {
 
 
     // have my clock running to display time is up after 45seconds, but at 35 secons a reminder to hurry up
-    setTimeout(timeUp, 1000 * 5);
+    setTimeout(timeUp, 1000 * 25);
     function timeUp() {
         console.log("done");
         $("#timeClock").append("<h4>Hurry you only have 10 seconds</h4>");
@@ -94,8 +94,8 @@ triviaQs.forEach((triviaQs) => console.log(triviaQs.corrAns));
 var triviaGame = {
     correctAns: 0,
     incorrectAns: 0,
-    // game clock will start 45 seconds
-    gameClock: 15,
+    // game clock will start 35 seconds
+    gameClock: 35,
     countdown: function () {
         // count down 1 second based on the setInerval function below
         triviaGame.gameClock--;
